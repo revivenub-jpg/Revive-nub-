@@ -75,31 +75,8 @@
     }
 
     .google-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 100%;
-  transition: all 0.3s ease;
-  color: #333;
-  font-weight: bold;
-}
-
-.google-btn:hover {
-  background: #f1f1f1;
-}
-
-.google-btn img {
-  width: 20px;
-  height: 20px;
-}
-
+      background: #db4437;
+    }
 
     .switch {
       text-align: center;
@@ -164,7 +141,6 @@
     // 🔥 Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
-    const provider = new GoogleAuthProvider();
 
     // Elements
     const emailInput = document.getElementById("email");
@@ -198,28 +174,24 @@
         alert(error.message);
       }
     });
-<!-- Google Login -->
-googleLoginBtn.addEventListener("click", async () => {
-  try {
-    // ✅ Google provider with account chooser
-    const provider = new GoogleAuthProvider();
-    provider.setCustomParameters({
-      prompt: "select_account"   // always show account chooser
+
+    // Google Login (with account chooser)
+    googleLoginBtn.addEventListener("click", async () => {
+      try {
+        const provider = new GoogleAuthProvider();
+        provider.setCustomParameters({
+          prompt: "select_account" // ✅ always show account chooser
+        });
+
+        const result = await signInWithPopup(auth, provider);
+        const user = result.user;
+        alert("Google sign-in successful: " + user.email);
+        window.location.href = "home.html"; // ✅ redirect after login
+      } catch (error) {
+        alert(error.message);
+      }
     });
-
-    const result = await signInWithPopup(auth, provider);
-    const user = result.user;
-    alert("Google sign-in successful: " + user.email);
-    window.location.href = "home.html"; // ✅ redirect after login
-  } catch (error) {
-    alert(error.message);
-  }
-  <button class="google-btn" id="googleLoginBtn">
-  <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo">
-  Continue with Google
-</button>
-
-});
   </script>
 </body>
 </html>
+
