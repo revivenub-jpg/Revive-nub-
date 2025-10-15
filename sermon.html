@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sermons & Study Materials</title>
+  <title>Sermons & Materials | Revive NUB</title>
+  <link rel="icon" type="image/png" href="revive log.png">
 
   <style>
     body {
@@ -12,8 +13,9 @@
       margin: 0;
       padding: 0;
     }
+
     header {
-      background: #333;
+      background: #222;
       color: white;
       text-align: center;
       padding: 15px;
@@ -21,60 +23,84 @@
       top: 0;
       z-index: 1000;
     }
+
     h1 {
       margin: 0;
       font-size: 24px;
+      letter-spacing: 1px;
     }
+
     .container {
       max-width: 900px;
       margin: auto;
       padding: 20px;
     }
-    .section {
+
+    .sermon {
       background: white;
       padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      text-align: center;
     }
-    .section h2 {
-      margin-top: 0;
-      color: #444;
-    }
-    .sermon {
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #ddd;
-    }
+
     .sermon h3 {
-      margin: 0 0 8px 100px;
-      color: #01031b;
-      font-weight: bold;
-    }
-    audio {
-      width: 100%;
-      margin-top: 8px;
+      margin: 15px 0 10px;
+      color: #222;
     }
 
     .sermon-img {
-  width: 70%;
-  max-height: 450px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  margin-left: 60px;
-}
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
 
-    a.download {
+    .iframe-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 25%; /* keeps the embed proportional */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .download-btn {
       display: inline-block;
-      margin-top: 5px;
-      text-decoration:;
-      color: #040013;
+      margin-top: 12px;
+      background: linear-gradient(135deg, #ff0000, #ff6a00);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s ease;
     }
-    a.download:hover {
-      text-decoration: underline;
+
+    .download-btn:hover {
+      background: #cc0000;
     }
+
+    .section {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-top: 30px;
+    }
+
     .telegram-link {
       display: inline-block;
       background: linear-gradient(135deg, #ff0000, #ff6a00);
@@ -85,11 +111,13 @@
       font-weight: bold;
       margin-top: 10px;
     }
+
     .telegram-link:hover {
-      background: #006f9a;
+      background: #cc0000;
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>📖 Sermons & Study Materials</h1>
@@ -97,63 +125,61 @@
 
   <div class="container">
 
-    <!-- Audio Sermons Section -->
+    <!-- SERMON 1 -->
     <div class="sermon">
-  <img src="RR101@3x.jpg" alt="Sermon 1 cover" class="sermon-img">
-  <h3>Redemption Realities(RR101)</h3>
-  <audio controls>
-    <source src="https://mega.nz/your-sermon-link-1.mp3" type="audio/mpeg">
-  </audio>
-  <a href="https://mega.nz/your-sermon-link-1.mp3" target="_blank">Download</a>
-</div>
-
-
- <div class="sermon">
-  <img src="THS 102@3x.jpg" alt="Sermon 1 cover" class="sermon-img">
-  <h3>The Holy Spirit (THS102)</h3>
-  <audio controls>
-    <source src="https://mega.nz/your-sermon-link-1.mp3" type="audio/mpeg">
-  </audio>
-  <a href="https://mega.nz/your-sermon-link-1.mp3" target="_blank">Download</a>
-</div>
-
- <div class="sermon">
-  <img src="PPF 103@3x@3x@3x.jpg" alt="Sermon 1 cover" class="sermon-img">
-  <h3>Priesthood Prayer & Fasting (PPF103)</h3>
-  <audio controls>
-    <source src="https://mega.nz/your-sermon-link-1.mp3" type="audio/mpeg">
-  </audio>
-  <a href="https://mega.nz/your-sermon-link-1.mp3" target="_blank">Download</a>
-</div>
-
- <div class="sermon">
-  <img src="SNL 104@3x@3x.jpg" alt="Sermon 1 cover" class="sermon-img">
-  <h3>Supernatural Life</h3>
-  <audio controls>
-    <source src="https://mega.nz/your-sermon-link-1.mp3" type="audio/mpeg">
-  </audio>
-  <a href="https://mega.nz/your-sermon-link-1.mp3" target="_blank">Download</a>
-</div>
-
- <div class="sermon">
-  <img src="CS 105@3x@3x.jpg" alt="Sermon 1 cover" class="sermon-img">
-  <h3>Character School</h3>
-  <audio controls>
-    <source src="https://mega.nz/your-sermon-link-1.mp3" type="audio/mpeg">
-  </audio>
-  <a href="https://mega.nz/your-sermon-link-1.mp3" target="_blank">Download</a>
-</div>
-
-      
+      <img src="RR101@3x.jpg" alt="Redemption Realities" class="sermon-img">
+      <h3>Redemption Realities (RR101)</h3>
+      <div class="iframe-wrapper">
+        <iframe src="https://mega.nz/embed/yVVhFQpK#mrLBskeY8cBxrYJnlAI1CjqzwA_1U9iI0tJTU3527lQ!1v1c" allowfullscreen></iframe>
+      </div>
+      <a href="https://mega.nz/file/yVVhFQpK#mrLBskeY8cBxrYJnlAI1CjqzwA_1U9iI0tJTU3527lQ" class="download-btn" target="_blank">⬇ Download</a>
     </div>
 
-    <!-- Telegram Link -->
+    <!-- SERMON 2 -->
+    <div class="sermon">
+      <img src="THS 102@3x.jpg" alt="The Holy Spirit" class="sermon-img">
+      <h3>The Holy Spirit (THS102)</h3>
+      <div class="iframe-wrapper">
+        <iframe src="https://mega.nz/embed/mA8GWSCQ#tHeAbTT-zSxoQEtGtJHUde259-uwL3LgIIvcssi-7Ns!1v1c" allowfullscreen></iframe>
+      </div>
+      <a href="https://mega.nz/file/mA8GWSCQ#tHeAbTT-zSxoQEtGtJHUde259-uwL3LgIIvcssi-7Ns" class="download-btn" target="_blank">⬇ Download</a>
+    </div>
+
+    <!-- SERMON 3 Placeholder -->
+    <div class="sermon">
+      <img src="PPF 103@3x@3x@3x.jpg" alt="Priesthood Prayer & Fasting" class="sermon-img">
+      <h3>Priesthood, Prayer & Fasting (PPF103)</h3>
+      <div class="iframe-wrapper">
+        <iframe src="#" allowfullscreen></iframe>
+      </div>
+      <a href="#" class="download-btn">⬇ Coming Soon</a>
+    </div>
+
+    <!-- SERMON 4 Placeholder -->
+    <div class="sermon">
+      <img src="SNL 104@3x@3x.jpg" alt="Supernatural Life" class="sermon-img">
+      <h3>Supernatural Life (SNL104)</h3>
+      <div class="iframe-wrapper">
+        <iframe src="#" allowfullscreen></iframe>
+      </div>
+      <a href="#" class="download-btn">⬇ Coming Soon</a>
+    </div>
+
+    <!-- SERMON 5 Placeholder -->
+    <div class="sermon">
+      <img src="CS 105@3x@3x.jpg" alt="Character School" class="sermon-img">
+      <h3>Character School (CS105)</h3>
+      <div class="iframe-wrapper">
+        <iframe src="#" allowfullscreen></iframe>
+      </div>
+      <a href="#" class="download-btn">⬇ Coming Soon</a>
+    </div>
+
+    <!-- TELEGRAM SECTION -->
     <div class="section">
-      <h2>📖 Audio Bible & More</h2>
-      <p>Listen to all sermons and audio Bible on our Telegram channel:</p>
-      <a href="https://t.me/+5r-5YCs4uMwxZjQ0" target="_blank" class="telegram-link">
-        📲 Join Telegram Channel
-      </a>
+      <h2>📚 Audio Bible & More</h2>
+      <p>Listen to all sermons, teachings, and the Audio Bible on our Telegram channel:</p>
+      <a href="https://t.me/+5r-5YCs4uMwxZjQ0" target="_blank" class="telegram-link">📲 Join Telegram Channel</a>
     </div>
 
   </div>

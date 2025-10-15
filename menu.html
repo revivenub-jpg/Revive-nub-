@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Menu | Revive NUB</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revive NUB</title>
+  <link rel="icon" type="image/png" href="revive log.png">
   <style>
     body {
       margin: 0;
@@ -58,8 +59,8 @@ nav .menu a:hover {
     /* Floating Logout Button */
 #logoutBtn {
   position: fixed;
-  top: 20%;
-  right: -350px;
+  top: 1000%;
+  left: 350%;;
   background: linear-gradient(135deg, #ff0000, #ff6a00);
   padding: 12px 18px;
   border: none;
@@ -150,9 +151,10 @@ nav .menu a:hover {
     }
 
     .card img {
-      height: 100px;
+      height: 120px;
       width: auto;
       margin-bottom: 1rem;
+      border-radius: 50px;
     }
 
     .card h2 {
@@ -269,7 +271,13 @@ nav .menu a:hover {
       <img src="suggestion box.png" alt="Donation">
       <h2>Suggestion Box</h2>
       <p>we will love to know </p>
-      <button>Donate</button>
+      <button>Open</button>
+    </div>
+    <div class="card" onclick="location.href='program.html'">
+      <img src="fellowship.jpg" alt="Donation">
+      <h2>Blog PAGE</h2>
+      <p>Programmes and upcoming events</p>
+      <button>Check it out</button>
     </div>
     <!-- Floating WhatsApp Icon -->
   <a href="https://wa.me/2348067468666" target="_blank" class="whatsapp-float" data-tooltip="Customer care">
